@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ArenaCash - Indique um amigo e ganhe R$ 1000</title>
+<title>ArenaCash - Indique um amigo e ganhe R$ 1.000</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -215,12 +215,14 @@ body {
   display: block;
   font-family: var(--font-display);
   font-weight: var(--fw-black);
-  font-size: 56px;
+  /* 48px em vez de 56px: "R$ 1.000" tem mais dígitos e quebrava a linha do cartão */
+  font-size: 48px;
   line-height: 0.95;
   letter-spacing: -0.04em;
+  white-space: nowrap;
   color: var(--pa-white);
 }
-.reward-card--back .reward-value { font-size: 34px; color: var(--pa-gray-300); }
+.reward-card--back .reward-value { font-size: 30px; color: var(--pa-gray-300); }
 
 .reward-specs {
   list-style: none;
@@ -380,11 +382,11 @@ h1 .accent { color: var(--pa-red); }
 
       <span class="pa-eyebrow pa-eyebrow--red">P R O G R A M A &nbsp; D E &nbsp; I N D I C A Ç Ã O</span>
 
-      <h1>Indique um amigo e <span class="accent">ganhe R$ 50.</span></h1>
+      <h1>Indique um amigo e <span class="accent">ganhe R$ 1.000.</span></h1>
 
       <p class="hero-sub">
         Convide quem você confia para abrir conta na ArenaCash. Quando a primeira aplicação
-        acontecer, os R$ 50 caem na conta de vocês dois - sem letra miúda, sem carência.
+        acontecer, os R$ 1.000 caem na conta de vocês dois - sem letra miúda, sem carência.
       </p>
 
       <a class="btn btn--primary btn--lg" href="#">Saiba mais</a>
@@ -394,12 +396,12 @@ h1 .accent { color: var(--pa-red); }
     <aside class="reward-stack">
       <div class="reward-card reward-card--back">
         <span class="reward-eyebrow">Seu amigo</span>
-        <span class="reward-value">R$ 50</span>
+        <span class="reward-value">R$ 1.000</span>
       </div>
 
       <div class="reward-card reward-card--front">
         <span class="reward-eyebrow">Você</span>
-        <span class="reward-value">R$ 50</span>
+        <span class="reward-value">R$ 1.000</span>
         <ul class="reward-specs">
           <li><span>Crédito</span><strong>na conta</strong></li>
           <li><span>Carência</span><strong>0 dias</strong></li>
